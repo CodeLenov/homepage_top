@@ -18,6 +18,15 @@ body {
 		"footer"
 }
 
+a {
+	text-decoration: none;
+	color: black;
+}
+
+a:hover {
+	color: blue;
+}
+
 img {
 	max-width: 20em;
 	height: auto;
@@ -45,14 +54,6 @@ main {
 	gap: 1em;
 	text-align: center;
 }
-
-/*.container{
-	display: flex;
-	flex-flow: row wrap;
-	gap: 2em;
-	justify-content: space-evenly;
-	text-align: center;
-}*/
 
 /* ---------------------------------------------------------------------- */
 /* !!! 4. <footer> !!! */
