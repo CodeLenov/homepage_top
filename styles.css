@@ -10,8 +10,9 @@
 /* !!! 1. <body> !!! */
 
 body {
+	margin: 0;
 	display: grid;
-	grid-template: repeat(2, minmax(min-content, 1fr)) / minmax(min-content, 1fr);
+	grid-template: repeat(3, minmax(min-content, 100vh)) / minmax(min-content, 1fr);
 	grid-template-areas:
 		"header"
 		"main"
@@ -27,9 +28,10 @@ a:hover {
 	color: blue;
 }
 
-img {
-	max-width: 20em;
+svg {
+	max-width: 2em;
 	height: auto;
+	fill: currentColor;
 }
 
 /* ---------------------------------------------------------------------- */
@@ -37,6 +39,55 @@ img {
 
 header {
 	grid-area: header;
+	background-color: #0080ff;
+	display: grid;
+	grid-template: minmax(min-content, 100vh) / minmax(min-content, 0.6fr) minmax(min-content, 1fr);
+	grid-template-areas: "headerHgroup headerSection";
+	align-items: center;
+}
+
+header hgroup {
+	grid-area: headerHgroup;
+	justify-self: right;
+	display: flex;
+	justify-content: center;
+}
+
+header hgroup h1 {
+	color: white;
+	position: absolute;
+	z-index: 10;
+	bottom: 10%;
+	font-size: 3em;
+}
+
+header hgroup img {
+	width: auto;
+	max-height: 90vh;
+}
+
+header section {
+	grid-area: headerSection;
+	height: 80%;
+	margin-right: 10%;
+	padding: 0 2em;
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+header section ul {
+	margin: 0;
+}
+
+header section div {
+	padding-top: 1.5em;
+	text-align: right;
+}
+
+header section div a {
+	padding: 0.5em;
 }
 
 /* ---------------------------------------------------------------------- */
@@ -44,6 +95,7 @@ header {
 
 main {
 	grid-area: main;
+	padding: 0 2em;
 }
 
 .container {
@@ -55,11 +107,21 @@ main {
 	text-align: center;
 }
 
+.container img {
+	max-width: 20em;
+	height: auto;
+}
+
 /* ---------------------------------------------------------------------- */
 /* !!! 4. <footer> !!! */
 
 footer {
 	grid-area: footer;
+}
+
+footer img {
+	max-width: 90%;
+	height: auto;
 }
 
 /* ---------------------------------------------------------------------- */
