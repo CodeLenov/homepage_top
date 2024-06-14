@@ -117,9 +117,42 @@ main {
 
 footer {
 	grid-area: footer;
+	background-color: #0080ff;
+	color: white;
+	display: grid;
+	grid-template: minmax(min-content, 1fr) / minmax(min-content, 0.6fr) minmax(min-content, 1fr);
+	grid-template-areas: "footerSection footerImg";
+	align-items: center;
+}
+
+footer section {
+	grid-area: footerSection;
+	margin: auto;
+}
+
+footer section address {
+	padding-top: 0.5em;
+}
+
+footer section address p svg {
+	max-width: 1em;
+	height: auto;
+}
+
+footer section address p a {
+	color: white;
+}
+
+footer section address div {
+	padding-top: 1.5em;
+}
+
+footer section address div a {
+	padding-right: 1em;
 }
 
 footer img {
+	grid-area: footerImg;
 	max-width: 90%;
 	height: auto;
 }
