@@ -86,7 +86,7 @@ main {
 	padding: 0 2em;
 }
 
-.container {
+main .container {
 	display: grid;
 	grid-template: repeat(2, minmax(min-content, 1fr)) / repeat(3, minmax(min-content, 1fr));
 	grid-auto-flow: row;
@@ -95,7 +95,7 @@ main {
 	text-align: center;
 }
 
-.container img {
+main .container img {
 	max-width: 20em;
 	height: auto;
 }
@@ -160,7 +160,7 @@ footer img {
 		float: left;
 	}
 
-	.container {
+	main .container {
 		display: grid;
 		grid-template: repeat(3, minmax(min-content, 1fr)) / repeat(2, minmax(min-content, 1fr));
 		grid-auto-flow: row;
@@ -169,11 +169,15 @@ footer img {
 		text-align: center;
 	}
 
+	footer section {
+		padding: 2em;
+	}
+
 }
 
 @media (max-width: 39.99em) {
 
-	.container {
+	main .container {
 		display: grid;
 		grid-template: repeat(6, minmax(min-content, 1fr)) / minmax(min-content, 1fr);
 		grid-auto-flow: row;
