@@ -40,41 +40,29 @@ svg {
 header {
 	grid-area: header;
 	background-color: #0080ff;
-	display: grid;
-	grid-template: minmax(min-content, 100vh) / minmax(min-content, 0.6fr) minmax(min-content, 1fr);
-	grid-template-areas: "headerHgroup headerSection";
+	display: flex;
+	justify-content: center;
 	align-items: center;
 }
 
-header hgroup {
-	grid-area: headerHgroup;
-	justify-self: right;
-	display: flex;
-	justify-content: center;
-}
-
-header hgroup h1 {
+header h1 {
 	color: white;
 	position: absolute;
 	z-index: 10;
+	left: 6%;
 	bottom: 10%;
 	font-size: 3em;
 }
 
-header hgroup img {
+header img {
 	width: auto;
 	max-height: 90vh;
+	padding-left: 5vh;
 }
 
 header section {
-	grid-area: headerSection;
-	height: 80%;
-	margin-right: 10%;
-	padding: 0 2em;
+	padding: 2em;
 	background-color: white;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
 }
 
 header section ul {
@@ -131,7 +119,7 @@ footer section {
 }
 
 footer section address {
-	padding-top: 0.5em;
+	padding-top: 0.2em;
 }
 
 footer section address p svg {
@@ -159,3 +147,48 @@ footer img {
 
 /* ---------------------------------------------------------------------- */
 /* !!! 5. @media query !!! */
+
+/*@media (max-width: 59.99em) {
+
+	header {
+		display: grid;
+		grid-template: minmax(min-content, 1fr) / minmax(min-content, 1fr);
+	}
+
+	header hgroup {
+		justify-self: initial;
+	}
+
+	header hgroup h1 {
+		position: static;
+	}
+
+	header hgroup img {
+		
+		height: 90%;
+	}
+
+	.container {
+		display: grid;
+		grid-template: repeat(3, minmax(min-content, 1fr)) / repeat(2, minmax(min-content, 1fr));
+		grid-auto-flow: row;
+		grid-auto-rows: minmax(min-content, 1fr);
+		gap: 1em;
+		text-align: center;
+	}
+
+}
+
+@media (max-width: 39.99em) {
+
+	.container {
+		display: grid;
+		grid-template: repeat(6, minmax(min-content, 1fr)) / minmax(min-content, 1fr);
+		grid-auto-flow: row;
+		grid-auto-rows: minmax(min-content, 1fr);
+		gap: 1em;
+		text-align: center;
+	}
+
+}
+*/
