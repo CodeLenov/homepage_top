@@ -49,15 +49,15 @@ header h1 {
 	color: white;
 	position: absolute;
 	z-index: 10;
-	left: 6%;
+	left: 9%;
 	bottom: 10%;
 	font-size: 3em;
 }
 
 header img {
-	width: auto;
-	max-height: 90vh;
-	padding-left: 5vh;
+	max-width: 30%;
+	height: height;
+	padding-left: 5%;
 }
 
 header section {
@@ -148,24 +148,16 @@ footer img {
 /* ---------------------------------------------------------------------- */
 /* !!! 5. @media query !!! */
 
-/*@media (max-width: 59.99em) {
+@media (max-width: 59.99em) {
 
-	header {
-		display: grid;
-		grid-template: minmax(min-content, 1fr) / minmax(min-content, 1fr);
+	header h1 {
+		top: 5%;
+		left: 12%;
 	}
 
-	header hgroup {
-		justify-self: initial;
-	}
-
-	header hgroup h1 {
-		position: static;
-	}
-
-	header hgroup img {
-		
-		height: 90%;
+	header img {
+		max-width: 50%;
+		float: left;
 	}
 
 	.container {
@@ -191,4 +183,3 @@ footer img {
 	}
 
 }
-*/
